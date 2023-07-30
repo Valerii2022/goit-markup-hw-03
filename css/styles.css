@@ -41,14 +41,6 @@ img {
   display: block;
 }
 
-.container {
-  max-width: 1440px;
-  padding-left: 156px;
-  padding-right: 156px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .link {
   text-decoration: none;
 }
@@ -74,6 +66,13 @@ button {
   overflow: hidden;
 }
 
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -94,6 +93,7 @@ button {
 
 .navigate {
   display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -104,7 +104,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand-color);
-  padding-right: 76px;
+  margin-right: 76px;
 }
 
 .logo .brand-color {
@@ -121,6 +121,8 @@ button {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .navigate-list .link:hover,
@@ -185,6 +187,7 @@ button {
   margin-right: auto;
   margin-left: auto;
   display: block;
+  min-width: 169px;
 }
 
 .hero .btn:hover,
@@ -274,8 +277,6 @@ button {
   text-align: center;
   padding-top: 32px;
   padding-bottom: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .our-team .subtitle {
@@ -303,6 +304,8 @@ button {
 
 .footer .logo {
   color: var(--primary-brand-color);
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer .brand-color {
@@ -315,7 +318,6 @@ button {
   letter-spacing: 0.02em;
   color: var(--light-color);
   max-width: 264px;
-  margin-top: 16px;
 }
 
 /* PORTFOLIO STYLES------------------------------------- */
@@ -352,6 +354,7 @@ button {
 .filter .btn:focus {
   color: var(--white-background-color);
   background-color: var(--pressed-state-color);
+  border: 1px solid transparent;
 }
 
 .cards {
@@ -367,9 +370,9 @@ button {
 
 .cards .title-wrap {
   padding-top: 32px;
-  padding-bottom: 31px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-left: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
