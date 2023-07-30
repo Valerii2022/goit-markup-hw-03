@@ -19,6 +19,36 @@ body {
   background-color: var(--white-background-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 156px;
+  padding-right: 156px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .link {
   text-decoration: none;
 }
@@ -31,8 +61,39 @@ button {
   cursor: pointer;
 }
 
-.hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* HEADER STYLES----------------------------------------------------- */
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigate {
+  display: flex;
 }
 
 .logo {
@@ -43,12 +104,17 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand-color);
+  padding-right: 76px;
 }
 
 .logo .brand-color {
   color: var(--navy-blue-color);
 }
 
+.navigate-list {
+  display: flex;
+  gap: 40px;
+}
 .navigate-list .link {
   font-size: 16px;
   line-height: 1.5;
@@ -66,6 +132,10 @@ button {
   font-style: normal;
 }
 
+.address .list {
+  display: flex;
+  gap: 40px;
+}
 .address .link {
   font-size: 16px;
   line-height: 1.5;
@@ -78,12 +148,12 @@ button {
   color: var(--pressed-state-color);
 }
 
-.header .current {
-  color: var(--primary-brand-color);
-}
+/* HERO STYLES----------------------------------------------------- */
 
 .hero {
   background-color: var(--navy-blue-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero .title {
@@ -92,6 +162,10 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white-background-color);
+  max-width: 496px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero .btn {
@@ -102,11 +176,31 @@ button {
   letter-spacing: 0.04em;
   color: var(--white-background-color);
   background-color: var(--primary-brand-color);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 4px;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 .hero .btn:hover,
 .hero .btn:focus {
   background-color: var(--pressed-state-color);
+}
+
+/* BENEFITS STYLES------------------------------------------------------------ */
+
+.benefits .list {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits .item {
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .benefits .subtitle {
@@ -115,12 +209,19 @@ button {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
+  margin-bottom: 8px;
 }
 
 .benefits .text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+/* TODO STYLES---------------------------------------------------------- */
+
+.todo {
+  padding-bottom: 120px;
 }
 
 .todo .title {
@@ -130,7 +231,19 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy-blue-color);
+  margin-bottom: 72px;
 }
+
+.todo .list {
+  display: flex;
+  gap: 24px;
+}
+
+.todo .item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+/* OUT TEAM STYLES-------------------------------------------------------- */
 
 .our-team {
   background-color: var(--light-color);
@@ -143,10 +256,26 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy-blue-color);
+  margin-bottom: 72px;
+}
+
+.our-team .list {
+  display: flex;
+  gap: 24px;
 }
 
 .our-team .item {
   background-color: var(--white-background-color);
+  flex-basis: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
+}
+
+.our-team .name-wrap {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .our-team .subtitle {
@@ -155,6 +284,7 @@ button {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
+  margin-bottom: 8px;
 }
 
 .our-team .text {
@@ -163,8 +293,12 @@ button {
   letter-spacing: 0.02em;
 }
 
+/* FOOTER STYLES-------------------------------------------------- */
+
 .footer {
   background-color: var(--navy-blue-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer .logo {
@@ -180,6 +314,22 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--light-color);
+  max-width: 264px;
+  margin-top: 16px;
+}
+
+/* PORTFOLIO STYLES------------------------------------- */
+
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.filter {
+  display: flex;
+  margin-bottom: 72px;
+  gap: 24px;
+  justify-content: center;
 }
 
 .filter .btn {
@@ -190,6 +340,12 @@ button {
   letter-spacing: 0.04em;
   color: var(--primary-brand-color);
   background-color: var(--light-color);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
 }
 
 .filter .btn:hover,
@@ -198,12 +354,34 @@ button {
   background-color: var(--pressed-state-color);
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.cards .item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.cards .title-wrap {
+  padding-top: 32px;
+  padding-bottom: 31px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-left: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
 .cards .subtitle {
   font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
+  margin-bottom: 8px;
 }
 
 .cards .text {
